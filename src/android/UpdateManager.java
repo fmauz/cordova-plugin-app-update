@@ -81,7 +81,7 @@ public class UpdateManager {
                 case Constants.NETWORK_ERROR:
                     //暂时隐藏错误
                     //msgBox.showErrorDialog(errorDialogOnClick);
-                    callbackContext.error(Utils.makeJSON(Constants.NETWORK_ERROR, "network error"));
+                    callbackContext.error(Utils.makeJSON(Constants.NETWORK_ERROR, "problema na conexao"));
                     break;
                 case Constants.VERSION_COMPARE_START:
                     compareVersions();
@@ -93,13 +93,13 @@ public class UpdateManager {
                     isDownloading = false;
                     break;
                 case Constants.VERSION_UPDATING:
-                    callbackContext.success(Utils.makeJSON(Constants.VERSION_UPDATING, "success, version updating."));
+                    callbackContext.success(Utils.makeJSON(Constants.VERSION_UPDATING, "Atualizando"));
                     break;
                 case Constants.VERSION_NEED_UPDATE:
-                    callbackContext.success(Utils.makeJSON(Constants.VERSION_NEED_UPDATE, "success, need date."));
+                    callbackContext.success(Utils.makeJSON(Constants.VERSION_NEED_UPDATE, "Nova versão disponível."));
                     break;
                 case Constants.VERSION_UP_TO_UPDATE:
-                    callbackContext.success(Utils.makeJSON(Constants.VERSION_UP_TO_UPDATE, "success, up to date."));
+                    callbackContext.success(Utils.makeJSON(Constants.VERSION_UP_TO_UPDATE, "Atualizado!"));
                     break;
                 case Constants.VERSION_COMPARE_FAIL:
                     callbackContext.error(Utils.makeJSON(Constants.VERSION_COMPARE_FAIL, "version compare fail"));
